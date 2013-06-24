@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<mocha>,       ["~> 0.9.8"])
     end
   else
-    s.add_dependency(%q<activemodel>, ["~> 3.0"])
+    s.add_dependency(%q<activemodel>, [">= 3.0"])
     s.add_dependency(%q<rake>,        ["~> 0.8.7"])
     s.add_dependency(%q<shoulda>,     ["~> 2.11.3"])
     s.add_dependency(%q<mocha>,       ["~> 0.9.8"])
