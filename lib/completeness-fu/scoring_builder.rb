@@ -23,10 +23,10 @@ module CompletenessFu
 
     private
     
-      def check(name, check, weighting = nil)
+      def check(name, check, weighting = nil, url = nil)
         weighting ||= self.default_weighting
         weighting = self.model_weightings[weighting] if weighting.is_a?(Symbol)
-        self.completeness_checks << { :name => name, :check => check, :weighting => weighting}
+        self.completeness_checks << { :name => name, :check => check, :weighting => weighting, :url => url}
       end
 
       def weightings(custom_weighting_opts)
