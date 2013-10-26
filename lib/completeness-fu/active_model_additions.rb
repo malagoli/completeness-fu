@@ -100,7 +100,7 @@ module CompletenessFu
           namespace = CompletenessFu.default_i18n_namespace + [self.class.model_name.demodulize.underscore.to_sym, full_check[:name]]
 
           translations = [:title, :description, :extra].inject({}) do |list, field|
-                           list[field] = I18n.t(field.to_sym, :scope => namespace, :url => full_check[:url])
+                           list[field] = I18n.t(field.to_sym, :scope => namespace, :url => eval(full_check[:url]))
                            list
                          end
 
